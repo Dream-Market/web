@@ -29,7 +29,11 @@
     "clean": "rimraf node_modules/"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.5",
     "@reduxjs/toolkit": "1.8.5",
+    "classnames": "2.3.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.0",
@@ -50,6 +54,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.8",
     "eslint-plugin-react-hooks": "4.6.0",
+    "file-loader": "6.2.0",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.6.1",
     "prettier": "2.7.1",

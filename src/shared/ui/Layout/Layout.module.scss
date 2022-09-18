@@ -1,0 +1,28 @@
+.container {
+  padding: 0;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 50px;
+  min-height: 50px;
+}
+
+.main {
+  padding: 0;
+  margin: 0;
+  min-height: calc(100% - 50px - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  height: 100px;
+}

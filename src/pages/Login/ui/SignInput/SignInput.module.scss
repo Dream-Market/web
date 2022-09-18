@@ -1,0 +1,21 @@
+.input {
+  font: var(--font-m);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  height: 60px;
+  background: #eaf0f7;
+  border-radius: 10px;
+  border: 0;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-within {
+    border: 2px solid var(--text-color);
+  }
+}

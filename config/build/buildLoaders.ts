@@ -20,6 +20,19 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     ],
   };
 
+  const fileLoader = {
+    test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+        },
+      },
+    ],
+  };
+
   // for native js & jsx babel is needed
   const tsLoader = {
     test: /\.tsx?$/,
@@ -27,5 +40,5 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     exclude: /node_modules/,
   };
 
-  return [cssLoader, tsLoader];
+  return [cssLoader, fileLoader, tsLoader];
 };

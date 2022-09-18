@@ -1,0 +1,13 @@
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+
+  &_link {
+    font: var(--font-m);
+    color: var(--text-color);
+    text-decoration: none;
+  }
+}

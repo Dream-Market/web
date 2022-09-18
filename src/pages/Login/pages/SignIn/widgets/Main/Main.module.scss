@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  width: 100%;
+  align-items: stretch;
+
+  &_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    gap: 10px;
+
+    &:first-child {
+      gap: 60px;
+    }
+  }
+
+  &_title {
+    font-family: var(--font-m-bold);
+    font-size: 58px;
+    line-height: 87px;
+    margin-top: -22px;
+  }
+
+  &_text {
+    font: var(--font-m);
+  }
+
+  &_link {
+    font: var(--font-m-bold);
+    text-decoration: none;
+  }
+}
