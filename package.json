@@ -17,6 +17,7 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "start:clean": "npm run clean && npm i && npm run start",
+    "build": "npm run build:prod",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "check": "npm-run-all check:*",
