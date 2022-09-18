@@ -1,26 +1,29 @@
 .container {
-  padding: 0;
   height: 100vh;
+  padding: 0;
 }
 
 .navbar {
-  background-color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 0;
+  justify-content: space-between;
+
   height: 50px;
   min-height: 50px;
+  padding: 0;
+
+  background-color: white;
 }
 
 .main {
-  padding: 0;
-  margin: 0;
-  min-height: calc(100% - 50px - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  min-height: calc(100% - 50px - 100px);
+  margin: 0;
+  padding: 0;
 }
 
 .footer {

@@ -1,9 +1,10 @@
 .group {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
   gap: 40px;
+  align-items: flex-start;
+
+  padding: 0;
 
   &_link {
     font: var(--font-m);
