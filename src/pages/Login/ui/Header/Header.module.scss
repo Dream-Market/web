@@ -1,0 +1,14 @@
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+
+  padding: 0;
+
+  &_link {
+    font: var(--font-m);
+    color: var(--text-color);
+    text-decoration: none;
+  }
+}

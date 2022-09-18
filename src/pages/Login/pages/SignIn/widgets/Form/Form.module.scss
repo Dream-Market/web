@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: flex-start;
+
+  width: 400px;
+  padding: 0;
+
+  &_group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  .input_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding: 0;
+  }
+}
