@@ -1,0 +1,17 @@
+import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
+import css from './{{pascalCase name}}.module.scss';
+
+interface {{pascalCase name}}Props {
+  className?: string;
+}
+
+export const {{pascalCase name}} = ({ className }: {{pascalCase name}}Props) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className={classNames(css.{{camelCase name}}, {}, [className])} data-testid="{{pascalCase name}}">
+      {t('{{pascalCase name}}')}
+    </div>
+  );
+};

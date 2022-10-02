@@ -1,7 +1,17 @@
+/* stylelint-disable scss/at-import-partial-extension */
 @import 'reset';
-@import './variables/global';
+@import 'variables/global';
 
 .app {
-  font: var(--font-m);
-  letter-spacing: 0.03em;
+  min-height: 100vh;
+}
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+
+  padding: 20px;
 }
