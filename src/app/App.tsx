@@ -2,14 +2,15 @@ import './styles/index.scss';
 import { Suspense } from 'react';
 import { AppRouter } from './providers/router';
 import classNames from 'classnames';
+import { CircularProgress } from '@mui/material';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 export const App = () => {
   return (
-    <div className={classNames('app', {}, [])}>
-      <Suspense fallback="">
-        <div className="content-page">
-          <AppRouter />
-        </div>
+    <div className={classNames('app')}>
+      <Suspense fallback={<CircularProgress />}>
+        <AppRouter />
+        <ThemeSwitcher />
       </Suspense>
     </div>
   );

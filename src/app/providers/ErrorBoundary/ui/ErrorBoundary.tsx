@@ -1,7 +1,7 @@
 import React, { Suspense, ErrorInfo, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 interface ErrorBoundaryState {

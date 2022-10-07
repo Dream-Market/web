@@ -1,0 +1,27 @@
+.buttonUnderlined {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+
+  &_content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3px;
+  }
+
+  &_underscore {
+    content: '';
+
+    display: block;
+
+    width: 45%;
+    margin: auto;
+
+    border-bottom: 3px solid;
+    border-radius: 3px;
+  }
+}

@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import css from './Home.module.scss';
 
 interface HomeProps {
@@ -11,7 +13,8 @@ const Home = ({ className }: HomeProps) => {
 
   return (
     <div className={classNames(css.home, {}, [className])} data-testid="Home">
-      {t('Home')}
+      <ThemeSwitcher />
+      <LanguageSwitcher />
     </div>
   );
 };
