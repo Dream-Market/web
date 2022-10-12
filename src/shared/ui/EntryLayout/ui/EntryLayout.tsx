@@ -5,10 +5,9 @@ import { ButtonUnderlined } from 'shared/ui/ButtonUnderlined';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 import { Link as RouterLink } from 'react-router-dom';
 import { ReactNode } from 'react';
-import { routeConfig } from 'shared/config/routeConfig';
-import { useNavigateTo } from 'shared/lib/hooks';
 import css from './EntryLayout.module.scss';
 import { Header } from 'shared/ui/Header';
+import { RoutePath } from 'shared/config/routeConfig';
 
 interface EntryLayoutProps {
   children?: ReactNode;
@@ -16,20 +15,18 @@ interface EntryLayoutProps {
 
 export const EntryLayout = ({ children }: EntryLayoutProps) => {
   const { t } = useTranslation(['entry']);
-  const toSignIn = useNavigateTo(routeConfig.signin.path);
-  const toSignUp = useNavigateTo(routeConfig.signup.path);
   return (
     <>
       <Header
         childrenLeft={
           <>
-            <Link component={RouterLink} to={'*'} underline={'hover'}>
+            <Link component={RouterLink} to={'*'} underline={'none'}>
               {t('About')}
             </Link>
             <Link
               component={RouterLink}
               to={'*'} //TODO Contact link
-              underline={'hover'}
+              underline={'none'}
             >
               {t('Contact')}
             </Link>
@@ -38,12 +35,21 @@ export const EntryLayout = ({ children }: EntryLayoutProps) => {
         childrenRight={
           <>
             <LanguageSwitcher />
-            <ButtonUnderlined onClick={toSignIn}>
-              {t('Sign in')}
-            </ButtonUnderlined>
-            <Button variant={'shadow'} onClick={toSignUp}>
-              {t('Register')}
-            </Button>
+            <Link
+              component={RouterLink}
+              to={RoutePath.signin}
+              underline={'none'}
+            >
+              <ButtonUnderlined>{t('Sign in')}</ButtonUnderlined>
+            </Link>
+
+            <Link
+              component={RouterLink}
+              to={RoutePath.signup}
+              underline={'none'}
+            >
+              <Button variant={'shadow'}>{t('Register')}</Button>
+            </Link>
           </>
         }
       />

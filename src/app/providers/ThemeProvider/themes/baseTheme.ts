@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { Theme } from '../lib/ThemeContext';
 
 export enum BaseColors {
   PRIMARY = '#4461F2',
@@ -8,9 +7,13 @@ export enum BaseColors {
   DANGER = '#c10e0e',
   WARNING = '#ff9800',
   TEXT_PRIMARY = '#222222',
+  LABEL_PRIMARY = '#222222aa',
   TEXT_PRIMARY_INVERTED = '#ffffff',
+  LABEL_PRIMARY_INVERTED = '#ffffffaa',
   BACKGROUND_LIGHT = '#fafafa',
-  BACKGROUND_DARK = '#252735',
+  BACKGROUND_DARK = '#0A192F',
+  PAPER_LIGHT = '#eaf0f7',
+  PAPER_DARK = '#172A46',
 }
 
 declare module '@mui/material/Button' {
@@ -21,7 +24,7 @@ declare module '@mui/material/Button' {
 
 export const baseTheme = createTheme({
   palette: {
-    mode: Theme.LIGHT,
+    mode: 'light',
     primary: {
       main: BaseColors.PRIMARY,
     },
@@ -36,7 +39,7 @@ export const baseTheme = createTheme({
     },
     background: {
       default: BaseColors.BACKGROUND_LIGHT,
-      paper: BaseColors.BACKGROUND_LIGHT,
+      paper: BaseColors.PAPER_LIGHT,
     },
   },
   typography: {
@@ -117,8 +120,35 @@ export const baseTheme = createTheme({
     },
     MuiLink: {
       styleOverrides: {
-        underlineHover: {
+        underlineNone: {
           color: BaseColors.TEXT_PRIMARY,
+          '&:hover': {
+            fontWeight: 'bold',
+          },
+        },
+        underlineHover: {
+          fontWeight: 'bold',
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          width: '100%',
+          '& label': {
+            color: BaseColors.LABEL_PRIMARY,
+          },
+          '& label.Mui-focused': {
+            color: BaseColors.PRIMARY,
+          },
+          '& .MuiFilledInput-root': {
+            borderRadius: '10px',
+            backgroundColor: BaseColors.PAPER_LIGHT,
+          },
+          input: {
+            borderRadius: '10px',
+            fontFeatureSettings: '"pnum" on, "lnum" on',
+          },
         },
       },
     },

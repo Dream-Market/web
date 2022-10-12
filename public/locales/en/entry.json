@@ -1,6 +1,18 @@
 {
   "About": "About",
+  "Already have an account": "Already have an account",
+  "Confirm password": "Confirm password",
   "Contact": "Contact",
+  "Dream Market": "Dream Market",
+  "Email": "Email",
+  "Email or phone": "Email or phone",
+  "Name": "Name",
+  "No account": "Don't have an account",
+  "Password": "Password",
+  "Phone": "Phone",
+  "Recover password": "Recover password",
   "Register": "Register",
-  "Sign in": "Sign in"
+  "Sign in": "Sign in",
+  "Sign in to": "Sign in to",
+  "Sign up to": "Sign up to"
 }

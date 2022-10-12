@@ -1,6 +1,18 @@
 {
   "About": "О сайте",
+  "Already have an account": "Уже есть аккаунт",
+  "Confirm password": "Повторите пароль",
   "Contact": "Контакты",
+  "Dream Market": "Dream Market",
+  "Email": "Email",
+  "Email or phone": "Email или телефон",
+  "Name": "Имя",
+  "No account": "Нет аккаунта",
+  "Password": "Пароль",
+  "Phone": "Телефон",
+  "Recover password": "Восстановить пароль",
   "Register": "Зарегистрироваться",
-  "Sign in": "Войти"
+  "Sign in": "Войти",
+  "Sign in to": "Войти в",
+  "Sign up to": "Зарегистрироваться в"
 }

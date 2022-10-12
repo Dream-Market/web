@@ -1,12 +1,30 @@
 /* eslint-disable */
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook';
 import { EntryLayout } from './EntryLayout';
 
 export default {
-  title: 'EntryLayout',
-};
+  title: 'layouts/EntryLayout',
+  component: EntryLayout,
+} as ComponentMeta<typeof EntryLayout>;
 
-export const Default = () => <EntryLayout />;
+const Template: ComponentStory<typeof EntryLayout> = (args) => (
+  <EntryLayout {...args} />
+);
 
-Default.story = {
+Template.story = {
   name: 'default',
 };
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Lorem ipsum',
+};
+Default.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const DefaultDark = Template.bind({});
+DefaultDark.args = {
+  children: 'Lorem ipsum',
+};
+DefaultDark.decorators = [ThemeDecorator(Theme.DARK)];

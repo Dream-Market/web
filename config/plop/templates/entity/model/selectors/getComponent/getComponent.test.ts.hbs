@@ -1,0 +1,12 @@
+import { DeepPartial } from '@reduxjs/toolkit';
+import { StateSchema } from 'app/providers/StoreProvider';
+import { get{{pascalCase name}} } from './get{{pascalCase name}}';
+
+describe('get{{pascalCase name}}', () => {
+  test('should return {{camelCase name}}', () => {
+    const state: DeepPartial<StateSchema> = {
+      {{camelCase name}}: {},
+    };
+    expect(get{{pascalCase name}}(state as StateSchema)).toEqual({});
+  });
+});

@@ -1,6 +1,6 @@
 import './styles/index.scss';
 import { Suspense } from 'react';
-import { AppRouter } from './providers/router';
+import { AppRouter } from './providers/Router';
 import classNames from 'classnames';
 import { CircularProgress } from '@mui/material';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';

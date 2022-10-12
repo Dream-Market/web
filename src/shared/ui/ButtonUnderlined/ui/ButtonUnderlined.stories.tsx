@@ -1,12 +1,30 @@
 /* eslint-disable */
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook';
 import { ButtonUnderlined } from './ButtonUnderlined';
 
 export default {
-  title: 'ButtonUnderlined',
-};
+  title: 'shared/ButtonUnderlined',
+  component: ButtonUnderlined,
+} as ComponentMeta<typeof ButtonUnderlined>;
 
-export const Default = () => <ButtonUnderlined />;
+const Template: ComponentStory<typeof ButtonUnderlined> = (args) => (
+  <ButtonUnderlined {...args} />
+);
 
-Default.story = {
+Template.story = {
   name: 'default',
 };
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Lorem ipsum',
+};
+Default.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const DefaultDark = Template.bind({});
+DefaultDark.args = {
+  children: 'Lorem ipsum',
+};
+DefaultDark.decorators = [ThemeDecorator(Theme.DARK)];

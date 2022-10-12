@@ -6,13 +6,13 @@ export const darkTheme = {
   name: Theme.DARK,
   theme: createTheme(baseTheme, {
     palette: {
-      mode: Theme.DARK,
+      mode: 'dark',
       text: {
         primary: BaseColors.TEXT_PRIMARY_INVERTED,
       },
       background: {
         default: BaseColors.BACKGROUND_DARK,
-        paper: BaseColors.BACKGROUND_DARK,
+        paper: BaseColors.PAPER_DARK,
       },
     },
     components: {
@@ -48,8 +48,27 @@ export const darkTheme = {
       },
       MuiLink: {
         styleOverrides: {
+          underlineNone: {
+            color: BaseColors.TEXT_PRIMARY_INVERTED,
+          },
           underlineHover: {
             color: BaseColors.TEXT_PRIMARY_INVERTED,
+          },
+        },
+      },
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            width: '100%',
+            '& label': {
+              color: BaseColors.LABEL_PRIMARY_INVERTED,
+            },
+            '& label.Mui-focused': {
+              color: BaseColors.PRIMARY_LIGHTER,
+            },
+            '& .MuiFilledInput-root': {
+              backgroundColor: BaseColors.PAPER_DARK,
+            },
           },
         },
       },

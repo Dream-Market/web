@@ -1,12 +1,28 @@
 /* eslint-disable */
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import {{pascalCase name}} from './{{pascalCase name}}';
+import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook';
 
 export default {
   title: '{{pascalCase name}}',
-};
+  component: {{pascalCase name}},
+} as ComponentMeta<typeof {{pascalCase name}}>;
 
-export const Default = () => <{{pascalCase name}} />;
+const Template: ComponentStory<typeof {{pascalCase name}}> = (args) => <{{pascalCase name}} {...args} />;
 
-Default.story = {
+Template.story = {
   name: 'default',
 };
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Text',
+};
+Default.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const DefaultDark = Template.bind({});
+DefaultDark.args = {
+  children: 'Text',
+};
+DefaultDark.decorators = [ThemeDecorator(Theme.DARK)];

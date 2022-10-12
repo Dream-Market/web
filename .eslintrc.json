@@ -39,10 +39,6 @@
 			"always"
 		],
 		"@typescript-eslint/no-use-before-define": "error",
-		"indent": [
-			"error",
-			2
-		],
 		"@typescript-eslint/quotes": [
 			"error",
 			"single",
@@ -74,6 +70,13 @@
 			"error",
 			{
 				"ignoreComments": true
+			}
+		],
+		"indent": [
+			"error",
+			2,
+			{
+				"SwitchCase": 1
 			}
 		]
 	},

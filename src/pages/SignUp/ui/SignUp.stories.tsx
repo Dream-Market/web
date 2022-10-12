@@ -1,12 +1,24 @@
 /* eslint-disable */
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Theme } from 'app/providers/ThemeProvider';
+import { ThemeDecorator } from 'shared/config/storybook';
 import SignUp from './SignUp';
 
 export default {
-  title: 'SignUp',
-};
+  title: 'pages/SignUp',
+  component: SignUp,
+} as ComponentMeta<typeof SignUp>;
 
-export const Default = () => <SignUp />;
+const Template: ComponentStory<typeof SignUp> = (args) => <SignUp {...args} />;
 
-Default.story = {
+Template.story = {
   name: 'default',
 };
+
+export const Default = Template.bind({});
+Default.args = {};
+Default.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const DefaultDark = Template.bind({});
+DefaultDark.args = {};
+DefaultDark.decorators = [ThemeDecorator(Theme.DARK)];
