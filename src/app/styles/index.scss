@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'variables/global';
+@import 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap';
+
+.app {
+  min-height: 100vh;
+
+  font-family: var(--font-family);
+}
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+}

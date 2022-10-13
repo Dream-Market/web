@@ -1,0 +1,16 @@
+import { fireEvent, screen } from '@testing-library/react';
+import { componentRender } from 'shared/config/tests';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+describe('{{pascalCase name}}', () => {
+  test('Check that {{camelCase name}} renders', () => {
+    componentRender(<{{pascalCase name}} />, {
+      initialState: {
+        {{camelCase name}}: {
+          
+        },
+      },
+    });
+    expect(screen.getByTestId('{{camelCase name}}')).toBeInTheDocument();
+  });
+});
