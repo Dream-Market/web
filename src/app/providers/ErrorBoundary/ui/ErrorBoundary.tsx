@@ -36,7 +36,7 @@ export default class ErrorBoundary extends React.PureComponent<
       // You can render any custom fallback UI
       return (
         <Suspense fallback="">
-          <div>Error</div>
+          <div>{'Error'}</div>
         </Suspense>
       );
     }

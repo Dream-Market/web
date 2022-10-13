@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci --ignore-scripts
-      
+
       - name: Build
         run: npm run build
 
@@ -38,13 +38,13 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci --ignore-scripts
-      
+
       - name: Check ESLint
         run: npm run check:eslint
-  
+
   check-ts:
     needs: build
     runs-on: ubuntu-latest
@@ -58,10 +58,10 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci --ignore-scripts
-      
+
       - name: Check TypeScript
         run: npm run check:ts
 
@@ -78,9 +78,9 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci --ignore-scripts
-      
+
       - name: Check Stylelint
         run: npm run check:stylelint

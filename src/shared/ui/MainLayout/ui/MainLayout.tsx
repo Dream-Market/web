@@ -10,7 +10,10 @@ export const MainLayout = ({ className }: MainLayoutProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(css.mainLayout, {}, [className])} data-testid="MainLayout">
+    <div
+      className={classNames(css.mainLayout, {}, [className])}
+      data-testid="MainLayout"
+    >
       {t('MainLayout')}
     </div>
   );

@@ -10,9 +10,10 @@ const Home = ({ className }: HomeProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(css.home, {}, [className])} data-testid="Home">
-      Home
-    </div>
+    <div
+      className={classNames(css.home, {}, [className])}
+      data-testid="Home"
+    ></div>
   );
 };
 

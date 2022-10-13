@@ -10,7 +10,10 @@ export const Layout = ({ className }: LayoutProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(css.layout, {}, [className])} data-testid="Layout">
+    <div
+      className={classNames(css.layout, {}, [className])}
+      data-testid="Layout"
+    >
       {t('Layout')}
     </div>
   );
